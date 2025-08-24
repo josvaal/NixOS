@@ -98,6 +98,7 @@
           nodejs_24
           yarn
           nodePackages."@nestjs/cli"
+          nodePackages."@angular/cli"
           
           # Git y herramientas relacionadas
           libsecret  # Necesario para secretservice

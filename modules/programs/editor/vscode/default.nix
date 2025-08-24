@@ -20,6 +20,8 @@
             yzhang.markdown-all-in-one
             catppuccin.catppuccin-vsc
             ms-python.python
+            astro-build.astro-vscode
+            yoavbls.pretty-ts-errors
           ];  
           keybindings = [
             {
@@ -76,11 +78,13 @@
             "editor.formatOnPaste" = true;
 
             "editor.minimap.enabled" = false;
+            "editor.guides.indentation" = false; # Sin líneas de guías
+            "editor.renderIndentGuides" = false; # Sin guías tradicionales
+            "editor.renderWhitespace" = "all"; # Mostrar espacios como símbolos
             "workbench.sideBar.location" = "left";
             # "workbench.activityBar.location" = "hidden";
-            # "workbench.editor.showTabs" = "single";
+            "workbench.editor.showTabs" = "single";
             # "workbench.statusBar.visible" = false;
-            "workbench.layoutControl.type" = "menu";
             "workbench.editor.limit.enabled" = true;
             "workbench.editor.limit.value" = 10;
             "workbench.editor.limit.perEditorGroup" = true;
@@ -90,9 +94,7 @@
             "editor.stickyScroll.enabled" = false; # Top code preview
             "editor.scrollbar.verticalScrollbarSize" = 2;
             "editor.scrollbar.horizontalScrollbarSize" = 2;
-            "editor.scrollbar.vertical" = "hidden";
-            "editor.scrollbar.horizontal" = "hidden";
-            "workbench.layoutControl.enabled" = false;
+            "editor.wordWrap" = "on";
 
             "editor.mouseWheelZoom" = true;
 
