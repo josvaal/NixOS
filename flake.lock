@@ -290,13 +290,13 @@
       "locked": {
         "lastModified": 1753735991,
         "narHash": "sha256-erKNAgCEg6/jqx7dIVdh/bnR3Lme/cbNzrtxFrRENKA=",
-        "owner": "Sly-Harvey",
+        "owner": "josvaal",
         "repo": "nixvim",
         "rev": "cc2fe00af198ed27d6195df216dbe4dcb874fc02",
         "type": "github"
       },
       "original": {
-        "owner": "Sly-Harvey",
+        "owner": "josvaal",
         "repo": "nixvim",
         "type": "github"
       }

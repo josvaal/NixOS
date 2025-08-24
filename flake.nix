@@ -13,7 +13,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixvim = {
-      url = "github:Sly-Harvey/nixvim";
+      url = "github:josvaal/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     spicetify-nix = {
@@ -48,7 +48,7 @@
     settings = {
       # User configuration
       username = "josval"; # automatically set with install.sh and live-install.sh
-      editor = "vscode"; # nixvim, vscode, nvchad, neovim, emacs (WIP)
+      editor = "nixvim"; # nixvim, vscode, nvchad, neovim, emacs (WIP)
       browser = "firefox"; # firefox, floorp, zen
       terminal = "kitty"; # kitty, alacritty, wezterm
       terminalFileManager = "yazi"; # yazi or lf

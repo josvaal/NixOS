@@ -5,6 +5,7 @@
   username,
   browser,
   terminal,
+  editor,
   locale,
   timezone,
   kbdLayout,
@@ -59,9 +60,18 @@
           else "/home/${username}";
         stateVersion = "23.11"; # Please read the comment before changing.
         sessionVariables = {
-          EDITOR = "nvim";
+          EDITOR = 
+            if editor == "nixvim" then "nvim"
+            else if editor == "vscode" then "code"
+            else if editor == "neovim" then "nvim"
+            else if editor == "nvchad" then "nvim"
+            else if editor == "emacs" then "emacs"
+            else "nvim"; # fallback
           BROWSER = browser;
           TERMINAL = terminal;
+          
+          # Configuración para Git Credential Manager
+          GCM_CREDENTIAL_STORE = "secretservice";
         };
         
         # Configurar npm para instalaciones globales en el directorio del usuario
@@ -88,6 +98,9 @@
           nodejs_24
           yarn
           nodePackages."@nestjs/cli"
+          
+          # Git y herramientas relacionadas
+          libsecret  # Necesario para secretservice
 
           # Terminal
           fzf
@@ -103,6 +116,17 @@
           unzip
         ];
       };
+      
+      # Configurar Git globalmente
+      programs.git = {
+        enable = true;
+        extraConfig = {
+          credential = {
+            credentialStore = "secretservice";
+            helper = "${pkgs.git-credential-manager}/bin/git-credential-manager";
+          };
+        };
+      };
     };
   };
 
@@ -111,6 +135,9 @@
   services.devmon.enable = true;
   services.gvfs.enable = true;
   services.udisks2.enable = true;
+  
+  # Habilitar servicios para Git Credential Manager (gnome-keyring ya está habilitado más abajo)
+  security.pam.services.login.enableGnomeKeyring = true;
 
   # services.scx = {
   #   enable = true;
