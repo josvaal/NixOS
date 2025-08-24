@@ -64,7 +64,6 @@
         # krita
         # github-desktop
         # gimp
-        obsidian
         fastfetch
       ];
     })
