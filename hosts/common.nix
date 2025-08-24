@@ -89,10 +89,9 @@
         packages = with pkgs; [
           # Applications
           #kate
-	  openssl
-	  remmina
-	  ktailctl
- 	  tailscale
+          openssl
+          remmina
+          tailscale
 
           # Development
           nodejs_24

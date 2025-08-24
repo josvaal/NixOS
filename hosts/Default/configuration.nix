@@ -42,6 +42,7 @@
     ../../modules/programs/misc/thunar
     ../../modules/programs/misc/lact # GPU fan, clock and power configuration
     ../../modules/programs/misc/nvm # Node Version Manager
+    ../../modules/programs/misc/tsui # TUI elegante para configurar Tailscale
     # ../../modules/programs/misc/nix-ld
     # ../../modules/programs/misc/virt-manager
   ];

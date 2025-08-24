@@ -29,6 +29,10 @@
       url = "github:catppuccin/thunderbird";
       flake = false;
     };
+    tsui = {
+      url = "github:neuralinkcorp/tsui";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     zen-browser = {
       url = "github:maximoffua/zen-browser.nix";
       inputs.nixpkgs.follows = "nixpkgs";

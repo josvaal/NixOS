@@ -416,6 +416,7 @@
         "nvchad4nix": "nvchad4nix",
         "spicetify-nix": "spicetify-nix",
         "thunderbird-catppuccin": "thunderbird-catppuccin",
+        "tsui": "tsui",
         "zen-browser": "zen-browser"
       }
     },
@@ -513,6 +514,26 @@
       "original": {
         "owner": "catppuccin",
         "repo": "thunderbird",
+        "type": "github"
+      }
+    },
+    "tsui": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1725553663,
+        "narHash": "sha256-PzDC8+42zmnB3XnRISk35jj9SueimZ4kywHlVRmDaWs=",
+        "owner": "neuralinkcorp",
+        "repo": "tsui",
+        "rev": "66ff849f9d5fbce4cc26b7365fcd0946ec4dab70",
+        "type": "github"
+      },
+      "original": {
+        "owner": "neuralinkcorp",
+        "repo": "tsui",
         "type": "github"
       }
     },
