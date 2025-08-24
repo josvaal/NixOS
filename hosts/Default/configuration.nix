@@ -41,7 +41,7 @@
     ../../modules/programs/misc/tlp
     ../../modules/programs/misc/thunar
     ../../modules/programs/misc/lact # GPU fan, clock and power configuration
-    # ../../modules/programs/misc/nvm # Node Version Manager
+    ../../modules/programs/misc/nvm # Node Version Manager
     # ../../modules/programs/misc/nix-ld
     # ../../modules/programs/misc/virt-manager
   ];

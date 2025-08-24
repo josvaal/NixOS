@@ -41,7 +41,7 @@
     useGlobalPkgs = true;
     useUserPackages = true;
     backupFileExtension = "backup";
-    users.${username} = {pkgs, ...}: {
+    users.${username} = {pkgs, lib, ...}: {
       # Let Home Manager install and manage itself.
       programs.home-manager.enable = true;
 
@@ -63,6 +63,18 @@
           BROWSER = browser;
           TERMINAL = terminal;
         };
+        
+        # Configurar npm para instalaciones globales en el directorio del usuario
+        file.".npmrc".text = ''
+          prefix=~/.npm-global
+          cache=~/.npm-cache
+        '';
+        
+        # Agregar el directorio de npm global al PATH
+        sessionPath = [
+          "$HOME/.npm-global/bin"
+        ];
+        
         # Packages that don't require configuration. If you're looking to configure a program see the /modules dir
         packages = with pkgs; [
           # Applications
@@ -75,6 +87,7 @@
           # Development
           nodejs_24
           yarn
+          nodePackages."@nestjs/cli"
 
           # Terminal
           fzf
