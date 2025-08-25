@@ -20,7 +20,7 @@
             yzhang.markdown-all-in-one
             catppuccin.catppuccin-vsc
             ms-python.python
-            astro-build.astro-vscode
+            # rangav.vscode-thunder-client # No disponible en nixpkgs, instalar manualmente desde marketplace
             yoavbls.pretty-ts-errors
           ];  
           keybindings = [
@@ -32,6 +32,10 @@
             {
               key = "ctrl+s";
               command = "workbench.action.files.saveFiles";
+            }
+            {
+              key = "ctrl+oem_3"; # Ctrl + ñ (tecla ñ en teclado español)
+              command = "workbench.action.terminal.toggleTerminal";
             }
           ];
           userSettings = {

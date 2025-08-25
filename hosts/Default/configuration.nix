@@ -43,7 +43,7 @@
     ../../modules/programs/misc/lact # GPU fan, clock and power configuration
     ../../modules/programs/misc/nvm # Node Version Manager
     ../../modules/programs/misc/tsui # TUI elegante para configurar Tailscale
-    # ../../modules/programs/misc/nix-ld
+    ../../modules/programs/misc/nix-ld # Necesario para ejecutables dinámicos como tsui
     # ../../modules/programs/misc/virt-manager
   ];
 
@@ -67,6 +67,8 @@
         # gimp
         fastfetch
         git-credential-manager
+        dbeaver-bin
+	lunar-client
       ];
     })
   ];

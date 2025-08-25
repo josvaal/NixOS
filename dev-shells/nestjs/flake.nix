@@ -20,6 +20,8 @@
             
             # NestJS CLI y herramientas relacionadas
             nodePackages."@nestjs/cli"
+            nodePackages."@angular/cli"
+            nodePackages."@chakra-ui/cli"
             nodePackages.typescript
             nodePackages.ts-node
             nodePackages.nodemon

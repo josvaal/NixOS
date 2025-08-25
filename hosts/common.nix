@@ -98,6 +98,7 @@
           yarn
           nodePackages."@nestjs/cli"
           nodePackages."@angular/cli"
+          # nodePackages."@chakra-ui/cli" # No disponible en nixpkgs, instalar con npm/yarn
           
           # Git y herramientas relacionadas
           libsecret  # Necesario para secretservice
@@ -208,6 +209,12 @@
 
   # Enable bluetooth
   services.blueman.enable = true;
+  
+  # Configuración del botón de power
+  services.logind = {
+    powerKey = "ignore";           # Ignorar presión corta del botón power
+    powerKeyLongPress = "poweroff"; # Apagar con presión larga del botón power
+  };
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
