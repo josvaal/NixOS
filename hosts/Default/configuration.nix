@@ -16,8 +16,9 @@
     ../common.nix
     ../../modules/scripts
 
-    ../../modules/desktop/hyprland # Enable hyprland window manager
+    #../../modules/desktop/hyprland # Enable hyprland window manager
     # ../../modules/desktop/i3-gaps # Enable i3 window manager
+    ../../modules/desktop/gnome
 
     ../../modules/programs/games
     ../../modules/programs/browser/${browser} # Set browser defined in flake.nix
@@ -66,6 +67,7 @@
         # github-desktop
         # gimp
         fastfetch
+	supabase-cli
         git-credential-manager
         dbeaver-bin
 	lunar-client
